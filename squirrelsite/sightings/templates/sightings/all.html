@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+    <head>
+    <body>
+        <h1>Squirrel Sites </h1>
+        <p title ="copyright"  style="color: goldenrod"> Group Projects of Tools for Analytics by MingJin and Yixuan Ma.</p>
+        <hr>
+        <h2> List of All Squirrels in Central Park</h2>
+        <ul>
+            {% for sq in squirrels %}
+             <li>{{ sq.Unique_Squirrel_ID }}</li>
+            {% endfor %}
+        </ul>
+    </body></head>
+    </head>
+</html>
