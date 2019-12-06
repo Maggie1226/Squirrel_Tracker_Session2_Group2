@@ -37,14 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'map',
     'sightings',
  ]
-=======
-    'sightings',
-]
->>>>>>> 4a51548cd23974015d8d90836d69016a35e51bfc
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
