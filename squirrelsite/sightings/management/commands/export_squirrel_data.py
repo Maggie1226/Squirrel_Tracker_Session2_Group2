@@ -8,11 +8,11 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         with open(options['csv_file'],"w",newline="") as fp:
-            writer=csv.writer(fp)
+            writer=csv.writer(fp,delimiter=",")
             field_names=[f.name for f in squirrel_site._meta.fields]
             writer.writerow(field_names)
             for obj in squirrel_site.objects.all():
-                row=""
+                row=[]
                 for field in field_names:
-                    row+=unicode(getattr(obj,field)).encode("utf-8")+","
+                    row.append(str(getattr(obj,field)))
                 writer.writerow(row)
