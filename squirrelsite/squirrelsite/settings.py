@@ -112,7 +112,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = False
-DATE_FORMAT = 'mdY'
+DATE_FORMAT = '%m%d%Y'
 
 USE_TZ = True
 
