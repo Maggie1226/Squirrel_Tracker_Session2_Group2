@@ -3,7 +3,7 @@ from django.db import models
 class squirrel_site(models.Model):
     Latitude=models.FloatField(max_length=100,)
     
-    Longtitude=models.FloatField(max_length=100,)
+    Longitude=models.FloatField(max_length=100,)
     
     Unique_Squirrel_ID=models.CharField(max_length=20,primary_key=True,unique=True,)
     
