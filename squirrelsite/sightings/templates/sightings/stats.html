@@ -1,5 +1,16 @@
-<ul>
-	{% for key, value in context.items %}
-	<li>{{key}}:{{value}}</li>
-	{% endfor %}
-</ul>
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+	<body>
+	    <h1>Squirrel Sites </h1>
+	    <p title="copyright" style="color:goldenrod"> GroupProjects of Tools for Analytics by MingJin and Yixuan Ma.</p>
+	<hr>
+	<h2> Statistics of All Squirrels in Central Park </h2>
+	<ul>
+        	{% for key, value in context.items %}
+		<li>{{key}}:{{value}}</li>
+		{% endfor %}
+	</ul>
+	</body>
+	</head>
+</html>

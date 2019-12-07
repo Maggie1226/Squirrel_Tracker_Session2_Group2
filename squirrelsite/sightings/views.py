@@ -10,13 +10,15 @@ def add(request):
         form=SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f"/sightings")
+            return redirect(f"sightings/")
     else:
         form=SquirrelForm()
     context={
         'form':form,
             }
     return render(request,'sightings/edit.html',context)
+
+
 
 def stats(request):
     total_sites=squirrel_site.objects.count()
@@ -31,7 +33,7 @@ def stats(request):
     context={
             "Total sites":total_sites,
             "Number of Running squirrels":Running_count,
-            "Number of Chasing squirrels":Running_count,
+            "Number of Chasing squirrels":Chasing_count,
             "Number of Climbing squirrels":Climbing_count,
             "Number of Eating squirrels":Eating_count,
             "Number of Foraging squirrels":Foraging_count,
