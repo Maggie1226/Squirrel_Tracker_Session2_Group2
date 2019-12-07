@@ -1,9 +1,8 @@
 Squirrel Sites Tracker in Central Park New York
 ====================================
-.. contents::
--------------------
+
 <div align="center">
-  <img src="https://clipartix.com/squirrel-clipart-image-8383/"><br>
+  <img src="https://images.app.goo.gl/wArAc2ofmA958UQP8"><br>
 </div>
 
 What is it?
