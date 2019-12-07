@@ -30,37 +30,37 @@ class squirrel_site(models.Model):
     Location_CHOICES=[(Ground_Plane,"Ground Plane"),(Above_Ground,"Above Ground"),]
     Location=models.CharField(max_length=20,choices=Location_CHOICES,default=Ground_Plane,)
 
-    Specific_location=models.TextField(max_length=500,)
+    Specific_location=models.TextField(max_length=500,blank=True)
     
-    Running=models.BooleanField(default=True,)
+    Running=models.BooleanField(default=False,)
 
-    Chasing=models.BooleanField(default=True,)
+    Chasing=models.BooleanField(default=False,)
 
-    Climbing=models.BooleanField(default=True,)
+    Climbing=models.BooleanField(default=False,)
 
-    Eating=models.BooleanField(default=True,)
+    Eating=models.BooleanField(default=False,)
 
-    Foraging=models.BooleanField(default=True,)
+    Foraging=models.BooleanField(default=False,)
 
-    Other_activities=models.TextField(max_length=500,)
+    Other_activities=models.TextField(max_length=500,blank=True)
 
-    Kuks=models.BooleanField(default=True,)
+    Kuks=models.BooleanField(default=False,)
 
-    Quaas=models.BooleanField(default=True,)
+    Quaas=models.BooleanField(default=False,)
 
-    Moans=models.BooleanField(default=True,)
+    Moans=models.BooleanField(default=False,)
 
-    Tail_flags=models.BooleanField(default=True,)
+    Tail_flags=models.BooleanField(default=False,)
 
-    Tail_twitches=models.BooleanField(default=True,)
+    Tail_twitches=models.BooleanField(default=False,)
 
-    Approaches=models.BooleanField(default=True,)
+    Approaches=models.BooleanField(default=False,)
 
-    Indifferent=models.BooleanField(default=True,)
+    Indifferent=models.BooleanField(default=False,)
 
-    Runs_from=models.BooleanField(default=True,)
+    Runs_from=models.BooleanField(default=False,)
 
-    Other_interactions=models.TextField(max_length=500,)
+    Other_interactions=models.TextField(max_length=500,blank=True)
 
 
 # Create your models here.
