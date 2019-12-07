@@ -50,9 +50,6 @@ def all_squirrels(request):
             }
     return render(request,'sightings/all.html',context)
 
-def squirrel_details(request, squirrel_id):
-    sq = squirrel_site.objects.get(Unique_Squirrel_ID=squirrel_id)
-    return HttpResponse(sq.Name)
 
 def edit_squirrel(request, squirrel_id):
     sq = squirrel_site.objects.get(Unique_Squirrel_ID=squirrel_id)

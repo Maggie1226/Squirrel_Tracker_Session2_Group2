@@ -12,8 +12,8 @@ class Command(BaseCommand):
             datas=list(reader)
         for data in datas:
             sq=squirrel_site(
-                Latitude=data['x']
-               ,Longtitude=data['y']
+                Latitude=data['y']
+               ,Longitude=data['x']
                ,Unique_Squirrel_ID=data['unique_squirrel_id']
                ,Shift=data['shift']
                ,Date=data['date']
