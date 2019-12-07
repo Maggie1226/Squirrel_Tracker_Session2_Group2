@@ -12,7 +12,7 @@ class squirrel_site(models.Model):
     Shift_CHOICES=[(AM,"AM"),(PM,"PM"),]
     Shift=models.CharField(max_length=2,choices=Shift_CHOICES,default=AM,)
     
-    Date=models.CharField(max_length=10,)
+    Date=models.DateField(auto_now=False,)
     
     Adult="Adult"
     Juvenile="Juvenile"
