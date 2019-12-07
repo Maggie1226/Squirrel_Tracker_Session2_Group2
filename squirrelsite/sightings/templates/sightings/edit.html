@@ -1,14 +1,113 @@
 <!DOCTYPE html>
-<html lang="en-US"> 
+<html lang="en-US">
+     <head> 
+            <style type="text/css"> 
+                body { 
+                        background-color: rgb(199, 214, 207);
+               
+                    } 
+                      
+                h1 { 
+                        color: #434343; 
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 40px; 
+                        font-weight: 500;
+                    } 
+                h2 { 
+                       color: #434343; 
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px; 
+                        font-weight: 500;
+                    }   
+                p { 
+                        color: rgb(25, 27, 27); 
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 14px;
+                        font-weight: lighter;
+                    } 
+                .form-style-4{
+                      	max-width: 600px;
+                      	margin:10px auto;
+                      	font-size: 16px;
+                      	background: rgb(199, 214, 207);
+                      	padding: 30px 30px 15px 30px;
+                      	border: 5px solid rgb(170, 194, 183);
+                      }
+                .form-style-4 input[type=submit],
+                .form-style-4 input[type=button],
+                .form-style-4 input[type=text],
+                .form-style-4 input[type=email],
+                .form-style-4 textarea,
+                .form-style-4 label{
+                      	font-family: 'Helvetica', sans-serif;
+                      	font-size: 16px;
+                      	color: rgb(235, 236, 234);}
+                .form-style-4 label {
+                      	display:block;
+                      	margin-bottom: 10px;
+                      }
+                .form-style-4 label > span{
+                      	display: inline-block;
+                      	float: left;
+                      	width: 150px;
+                          }
+                .form-style-4 input[type=text],
+                .form-style-4 input[type=date],
+                .form-style-4 input[type=datetime],
+                .form-style-4 input[type=number],
+                .form-style-4 input[type=search],
+                .form-style-4 input[type=time],
+                .form-style-4 input[type=url],
+                .form-style-4 textarea{
+                      	font-style: italic;
+                      	padding: 0px 0px 0px 0px;
+                      	background: transparent;
+                      	outline: none;
+                      	border: none;
+                      	border-bottom: 1px dashed rgb(116, 141, 124);
+                      	width: 275px;
+                      	overflow: hidden;
+                      	resize:none;
+                      	height:20px;
+                      }
+                      
+                .form-style-4 textarea:focus, 
+                .form-style-4 input[type=text]:focus,
+                .form-style-4 input[type=date]:focus,
+                .form-style-4 input[type=datetime]:focus,
+                .form-style-4 input[type=number]:focus,
+                .form-style-4 input[type=search]:focus,
+                .form-style-4 input[type=time]:focus,
+                .form-style-4 input[type=url]:focus,
+                .form-style-4 input[type=email]:focus
+                      {
+                      	border-bottom: 1px dashed #434343;
+                      }
+                      
+                      .form-style-4 input[type=submit],
+                      .form-style-4 input[type=button]{
+                      	background: #6A8372;
+                      	border: none;
+                      	padding: 8px 10px 8px 10px;
+                      	border-radius: 5px;
+                      	color: #434343;
+                      }
+                      .form-style-4 input[type=submit]:hover,
+                      .form-style-4 input[type=button]:hover{
+                      background: #394D61;
+                      }
+                </style> 
+            </head>
     <head>
     <body>
-        <h1>Squirrel Sites </h1>
-        <p title ="copyright"  style="color: goldenrod"> Group Projects of Tools for Analytics by MingJin and Yixuan Ma.</p>
+        <h1 align='center'>Squirrel Sites</h1>
+        {% load static %}
+        <img align='right' src={% static "sightings/Woodland-squirrel-clipart.jpg" %} alt="squirrel" width="200" height="250">
+        <p title ="copyright"  style="color: #465D4C; font-size: 18px; font-family: 'Open Sans',sans-serif;"> Group Projects of Tools for Analytics by Ming Jin and Yixuan Ma.</p>
         <hr>
-        <h2> Edit a Squirrel</h2>
-        <form method="post">
+        <h2 align='center'> Edit a Squirrel</h2>
+        <form class="form-style-4" method="post">
             {% csrf_token %}
-                
             {{ form.as_p }}
             <br>
             <input type="submit" name="Submit">
@@ -16,3 +115,4 @@
     </body></head>
     </head>
 </html>
+     

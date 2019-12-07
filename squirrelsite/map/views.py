@@ -10,7 +10,7 @@ from sightings.models import squirrel_site
 
 def squirrel_map(request):
     squirrels = squirrel_site.objects.all()
-    sightings = squirrels[:40]
+    sightings = squirrels[:100]
     context={
             'sightings':sightings
             ,}
