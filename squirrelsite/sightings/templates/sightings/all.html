@@ -1,19 +1,58 @@
-<!DOCTYPE html>
 <html lang="en-US">
+    <head> 
+            <style type="text/css"> 
+                body { 
+                        background-color: rgb(199, 214, 207);
+               
+                    } 
+                      
+                h1 { 
+                        color: #434343; 
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 40px; 
+                        font-weight: 500;
+                    } 
+                h2 { 
+                       color: #434343; 
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 20px; 
+                        font-weight: 500;
+                    }   
+                p { 
+                        color: rgb(25, 27, 27); 
+                        font-family: 'Helvetica', sans-serif;
+                        font-size: 16px;
+                        font-weight: lighter;
+                    } 
+                a{
+                    color: rgb(25, 27, 27); 
+                    font-family: 'Helvetica', sans-serif;
+                    font-size: 12px;
+                    font-weight: lighter;
+		}
+		ul {
+		    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+		    -moz-column-count: 4; /* Firefox */
+		    column-count: 4;
+		}	
+            </style>
+    </head>
+
     <head>
     <body>
-        <h1 align='center'>Squirrel Sites</h1>
-	{% load static %}
-	<img align='right' src={% static "sightings/squirrel2.jpeg" %} alt="squirrel" width="450" height="600">
-        <p title ="copyright"  style="color: rgb(126, 91, 3)"> Group Projects of Tools for Analytics by Ming Jin and Yixuan Ma.</p>
+        {% load static %}
+	<h1 align='center'>Squirrel Sites</h1>
+        <img align='right' src={% static "sightings/Woodland-squirrel-clipart.jpg" %} alt="squirrel" width="340" height="430">
+         <p title ="copyright"  style="color: #465D4C; font-size: 18px; font-family: 'Open Sans',sans-serif;"> Group Projects of Tools for Analytics by Ming Jin and Yixuan Ma.</p>
         <hr>
-        <h3>
-                <li><a href="add/">Add more Squirrel site here</a></li>
-        </h3>
-        <h2 style="font: Helvetica;"> List of All Squirrels in Central Park</h2>
+
+        <p align='left'><a style="font-size: 14px; color:rgb(25, 27, 27); font-family: 'Helvetica', sans-serif;" href="add/">Add more Squirrel site here</a><p>
+
+        <h2 align='left'> List of All Squirrels in Central Park</h2>
+        <br>
         <ul>
                  {% for sq in squirrels %}
-                 <li style="size: 5;">
+                 <li>
                          <a href="{{ sq.Unique_Squirrel_ID }}/">{{ sq.Unique_Squirrel_ID }}</a>
                  </li>
                  {% endfor %}
@@ -21,4 +60,4 @@
     </body>
     </head>
 </html>
-~       
+            
