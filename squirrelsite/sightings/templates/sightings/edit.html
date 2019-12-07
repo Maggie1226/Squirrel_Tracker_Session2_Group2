@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-US"> 
+<html lang="en-US">
     <head>
     <body>
-        <h1>Squirrel Sites </h1>
-        <p title ="copyright"  style="color: goldenrod"> Group Projects of Tools for Analytics by MingJin and Yixuan Ma.</p>
+        <h1 align='center'>Squirrel Sites</h1>
+        {% load static %}
+        <img align='right' src={% static "sightings/squirrel2.jpg" %} alt="squirrel" width="450" height="600">
+        <p title ="copyright"  style="color: rgb(126, 91, 3)"> Group Projects of Tools for Analytics by Ming Jin and Yixuan Ma.</p>
         <hr>
-        <h2> Edit a Squirrel</h2>
+	<h2> Edit a Squirrel</h2>
         <form method="post">
             {% csrf_token %}
                 

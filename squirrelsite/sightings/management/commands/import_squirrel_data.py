@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from sightings.models import squirrel_site
 import csv
-
+import datetime 
 class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('csv_file')
@@ -16,7 +16,8 @@ class Command(BaseCommand):
                ,Longitude=data['x']
                ,Unique_Squirrel_ID=data['unique_squirrel_id']
                ,Shift=data['shift']
-               ,Date=data['date']
+               ,Date=datetime.datetime.strptime(data['date'],'%m%d%Y').date()
+               
                ,Age=data['age']
                ,Primary_fur_color=data['primary_fur_color']
                ,Location=data['location']
