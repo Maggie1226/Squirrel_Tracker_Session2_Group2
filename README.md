@@ -9,7 +9,8 @@ What is it?
 -------------------
 **Squirrel Tracker Final Project** is a web application in Django Framework to track all the known squirrel sites in Central Park of New York. Our source data is from [`2018 Central Park Squirrel Census data`](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw).
 
-### Main Features
+Main Features
+-------------------
 Here are just a few of the things that we do:
 - Import and Export data using csv format: using management commands, we could import data from csv or output data from Django database into csv files. 
 
