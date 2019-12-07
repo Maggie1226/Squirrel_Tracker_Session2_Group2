@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en-US"> 
+<html lang="en-US">
     <head>
     <body>
-        <h1>Squirrel Sites </h1>
-        <p title ="copyright"  style="color: goldenrod"> Group Projects of Tools for Analytics by MingJin and Yixuan Ma.</p>
+        <h1 align='center'>Squirrel Sites</h1>
+        <img align='right' src="squirrel2.jpeg" alt="squirrel" width="450" height="600">
+        <p title ="copyright"  style="color: rgb(126, 91, 3)"> Group Projects of Tools for Analytics by Ming Jin and Yixuan Ma.</p>
         <hr>
-        <h2> List of All Squirrels in Central Park</h2>
+        <h3>
+                <li><a href="add/">Add more Squirrel site here</a></li>
+        </h3>
+        <h2 style="font: Helvetica;"> List of All Squirrels in Central Park</h2>
         <ul>
-            {% for sq in squirrels %}
-             <li>{{ sq.Unique_Squirrel_ID }}</li>
-            {% endfor %}
+                 {% for sq in squirrels %}
+                 <li style="size: 5;">
+                         <a href="{{ sq.Unique_Squirrel_ID }}/">{{ sq.Unique_Squirrel_ID }}</a>
+                 </li>
+                 {% endfor %}
         </ul>
-    </body></head>
+    </body>
     </head>
 </html>
