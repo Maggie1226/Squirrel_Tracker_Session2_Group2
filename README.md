@@ -31,7 +31,7 @@ About Developer
 - Project Group 2 Session 2
 - UNIs: [mj2940 ym2767]
 
-Link to running server
+Link to run server
 -------------------
-**Link**: https://squirrel-site-tracker.appspot.com/sightings/
-          https://squirrel-site-tracker.appspot.com/map/
+**Link to sightings**: https://squirrel-site-tracker.appspot.com/sightings/
+**Link to map**: https://squirrel-site-tracker.appspot.com/map/
