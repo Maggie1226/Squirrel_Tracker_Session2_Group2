@@ -10,7 +10,11 @@ def add(request):
         form=SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
+<<<<<<< HEAD:squirrelsite/sightings/views.py
+            return redirect(f"sightings/")
+=======
             return redirect("/sightings/")
+>>>>>>> 6a5c66c0c6cd78a0551b9ee10e49cb43de2c006a:sightings/views.py
     else:
         form=SquirrelForm()
     context={
@@ -52,6 +56,12 @@ def all_squirrels(request):
             }
     return render(request,'sightings/all.html',context)
 
+<<<<<<< HEAD:squirrelsite/sightings/views.py
+def squirrel_details(request, squirrel_id):
+    sq = squirrel_site.objects.get(Unique_Squirrel_ID=squirrel_id)
+    return HttpResponse(sq.Name)
+=======
+>>>>>>> 6a5c66c0c6cd78a0551b9ee10e49cb43de2c006a:sightings/views.py
 
 def edit_squirrel(request, squirrel_id):
     sq = squirrel_site.objects.get(Unique_Squirrel_ID=squirrel_id)
