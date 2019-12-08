@@ -10,7 +10,7 @@ def add(request):
         form=SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/sightings/")
+            return redirect("/sightings")
     else:
         form=SquirrelForm()
     context={
