@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> Ming
 *.pyc
 __pycache__
 collected-static
 *.sqlite3
-<<<<<<< HEAD
 
-
-*/*/*/__pycache__/
-
-*/*/__pycache__/
-
-*/__pycache__/
-=======
->>>>>>> Ming
