@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from .models import squirrel_site
 from .forms import SquirrelForm
 
+
 def add(request):
     if request.method=="POST":
         form=SquirrelForm(request.POST)
