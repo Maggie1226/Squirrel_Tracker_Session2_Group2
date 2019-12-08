@@ -1,3 +1,3 @@
-from project.wsgi import application
+from squirrelsite.wsgi import application
 
 app = application
