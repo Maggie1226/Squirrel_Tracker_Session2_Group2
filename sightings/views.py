@@ -60,7 +60,7 @@ def edit_squirrel(request, squirrel_id):
         # check data with form
         if form.is_valid():
             form.save()
-            return redirect(f'sightings/{squirrel_id}')
+            return redirect(f'/sightings')
     else:
         form = SquirrelForm(instance=sq)
 

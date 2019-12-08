@@ -9,7 +9,7 @@ class squirrel_site(models.Model):
         max_length=20,
         primary_key=True,
         unique=True,
-        help_text='Identification tag for each squirrel sightings. The tag is comprised of "Hectare ID" + "Shift" + "Date" + "Hectare Squirrel Number."',
+        help_text='\n "Hectare ID" + "Shift" + "Date" + "Hectare Squirrel Number."',
         )
     
     AM="am"
@@ -19,12 +19,10 @@ class squirrel_site(models.Model):
         max_length=2,
         choices=Shift_CHOICES,
         default=AM,
-        help_text='Value is either "AM" or "PM," to communicate whether or not the sighting session occurred in the morning or late afternoon.',
         )
     
     Date=models.DateField(
         auto_now=False,
-        help_text='Concatenation of the sighting session day and month.',
         )
     
     ADULT="adult"
@@ -34,7 +32,6 @@ class squirrel_site(models.Model):
         max_length=10,
         choices=Age_CHOICES,
         default=ADULT,
-        help_text='Value is either "Adult" or "Juvenile."',
         )
     
     GRAY="gray"
@@ -60,7 +57,6 @@ class squirrel_site(models.Model):
     Specific_location=models.TextField(
         max_length=500,
         blank=True,
-        help_text='Sighters occasionally added commentary on the squirrel location. These notes are provided here.',
         )
     
     Running=models.BooleanField(
@@ -90,48 +86,48 @@ class squirrel_site(models.Model):
 
     Kuks=models.BooleanField(
         default=False,
-        help_text='xSquirrel was heard kukking, a chirpy vocal communication used for a variety of reasons.'
+        help_text='\n Squirrel was heard kukking, a chirpy vocal communication used for a variety of reasons.'
         ,)
 
     Quaas=models.BooleanField(
         default=False,
-        help_text='Squirrel was heard quaaing, an elongated vocal communication which can indicate the presence of a ground predator such as a dog.',
+        help_text='\n Squirrel was heard quaaing, an elongated vocal communication which can indicate the presence of a ground predator such as a dog.',
         )
 
     Moans=models.BooleanField(
         default=False,
-        help_text='Squirrel was heard moaning, a high-pitched vocal communication which can indicate the presence of an air predator such as a hawk.',
+        help_text='\n Squirrel was heard moaning, a high-pitched vocal communication which can indicate the presence of an air predator such as a hawk.',
         )
 
     Tail_flags=models.BooleanField(
         default=False,
-        help_text="Squirrel was seen flagging its tail. Flagging is a whipping motion used to exaggerate squirrel's size and confuse rivals or predators. Looks as if the squirrel is scribbling with tail into the air.",
+        help_text="\n Squirrel was seen flagging its tail. Flagging is a whipping motion used to exaggerate squirrel's size and confuse rivals or predators. Looks as if the squirrel is scribbling with tail into the air.",
         )
 
     Tail_twitches=models.BooleanField(
         default=False,
-        help_text='Squirrel was seen twitching its tail. Looks like a wave running through the tail, like a breakdancer doing the arm wave. Often used to communicate interest, curiosity.',
+        help_text='\n Squirrel was seen twitching its tail. Looks like a wave running through the tail, like a breakdancer doing the arm wave. Often used to communicate interest, curiosity.',
         )
 
     Approaches=models.BooleanField(
         default=False,
-        help_text='Squirrel was seen approaching human, seeking food.',
+        help_text='\n Squirrel was seen approaching human, seeking food.',
         )
 
     Indifferent=models.BooleanField(
         default=False,
-        help_text='Squirrel was indifferent to human presence.',
+        help_text='\n Squirrel was indifferent to human presence.',
         )
 
     Runs_from=models.BooleanField(
         default=False,
-        help_text='Squirrel was seen running from humans, seeing them as a threat',
+        help_text='\n Squirrel was seen running from humans, seeing them as a threat',
         )
 
     Other_interactions=models.TextField(
         max_length=500,
         blank=True,
-        help_text='Sighter notes on other types of interactions between squirrels and humans.',
+        help_text='\n Sighter notes on other types of interactions between squirrels and humans.',
         )
 
 
