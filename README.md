@@ -33,4 +33,4 @@ About Developer
 
 Link to running server
 -------------------
-**Link**: https://squirrel-site-project.appspot.com
+**Link**: https://squirrel-site-tracker.appspot.com
